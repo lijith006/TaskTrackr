@@ -1,0 +1,23 @@
+import 'package:task_trackr/features/tasks/domain/entities/task.dart';
+
+abstract class TaskState {}
+
+class TaskInitial extends TaskState {}
+
+class TaskLoading extends TaskState {}
+
+class TaskLoaded extends TaskState {
+  final List<Task> tasks;
+  TaskLoaded(this.tasks);
+}
+
+class TaskError extends TaskState {
+  final String message;
+  TaskError(this.message);
+}
+
+//Success feedback states
+class TaskActionSuccess extends TaskState {
+  final String message;
+  TaskActionSuccess(this.message);
+}
