@@ -1,19 +1,50 @@
- HEAD
-# task_trackr
+# Task Trackr – Flutter To-Do App
 
-A new Flutter project.
+A simple and scalable **To-Do List application** built with Flutter and Firebase.  
+This project demonstrates **user authentication, task management, REST API integration with Firebase Realtime Database, and Clean Architecture with BLoC state management.**
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+### Authentication
+- Email & Password Sign Up
+- Email & Password Login
+- Logout
+- Google Sign-In support
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Task Management
+Users can:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# TaskTrackr
- 52a37fc1793db12664f3d1e41b7bf984ca9e9b60
+- View all tasks
+- Add new tasks
+- Edit existing tasks
+- Mark tasks as completed
+- Delete tasks
+
+### State Management
+Implemented using **BLoC**
+
+Separate state handling for:
+
+- Authentication
+- Task operations
+
+### Firebase Integration
+- Authentication handled with **Firebase Authentication**
+- Tasks stored in **Firebase Realtime Database**
+- Database communication implemented using **REST API calls**
+
+
+
+---
+
+## Tech Stack
+
+- Flutter
+- Dart
+- BLoC State Management
+- Firebase Authentication
+- Firebase Realtime Database
+- REST API
+- HTTP package
