@@ -50,8 +50,6 @@ class AuthServiceImpl implements AuthService {
     await _firebaseAuth.signOut();
   }
 
-  // ADD THESE
-
   @override
   User? get currentUser => _firebaseAuth.currentUser;
 

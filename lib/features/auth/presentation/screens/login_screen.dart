@@ -153,19 +153,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         style: TextStyle(color: AppTheme.surface),
                       ),
                     ),
-                    // Row(
-                    //   children: const [
-                    //     // Expanded(child: Divider()),
-                    //     Padding(
-                    //       padding: EdgeInsets.symmetric(horizontal: 10),
-                    //       child: Text(
-                    //         "OR",
-                    //         style: TextStyle(color: AppTheme.surface),
-                    //       ),
-                    //     ),
-                    //     // Expanded(child: Divider()),
-                    //   ],
-                    // ),
+
                     const SizedBox(height: 20),
                     BlocBuilder<AuthBloc, AuthState>(
                       builder: (context, state) {

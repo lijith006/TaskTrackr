@@ -37,8 +37,8 @@ class _SignupScreenState extends State<SignupScreen> {
       body: BlocListener<AuthBloc, AuthState>(
         listener: (context, state) {
           if (state is AuthAuthenticated) {
-            // Navigate to dashboard after - signup
-            Navigator.of(context).pushReplacementNamed('/dashboard');
+            // Navigate to home
+            Navigator.of(context).pushReplacementNamed('/home');
           } else if (state is AuthFailure) {
             ScaffoldMessenger.of(
               context,

@@ -28,9 +28,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:task_trackr/core/constants/app_theme.dart';
+import 'package:task_trackr/features/auth/domain/repository/auth_repository.dart';
+import 'package:task_trackr/features/auth/presentation/screens/signup_screen.dart';
+import 'package:task_trackr/features/tasks/presentation/bloc/task_bloc.dart';
+import 'package:task_trackr/features/tasks/presentation/screens/task_screen.dart';
 import 'package:task_trackr/firebase_options.dart';
-
-import 'package:task_trackr/features/auth/data/repositories/auth_repostory_impl.dart';
 
 import 'package:task_trackr/features/auth/domain/usecases/login_with_email.dart';
 import 'package:task_trackr/features/auth/domain/usecases/signup_with_email.dart';
@@ -67,6 +69,8 @@ void main() async {
             logout: logout,
           ),
         ),
+
+        BlocProvider(create: (_) => TaskBloc()),
       ],
       child: const MyApp(),
     ),
@@ -81,7 +85,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: AppTheme.darkTheme,
-      home: const LoginScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const LoginScreen(),
+        '/home': (context) => const TaskScreen(),
+        '/signup': (context) => const SignupScreen(),
+      },
     );
   }
 }
